@@ -3,8 +3,8 @@ Software to align VLBI images based on 2D cross-correlation.
 Copyright (C) 2017 Tuomas Savolainen
 
 
-usage: FITSalign.pl [-aco] <image1> <image2> [<x1> <y1> <x2> <y2>
-                     <xtemp1> <ytemp1> <xtemp2> <ytemp2>] 
+usage: FITSalign.pl [-aco] image1 image2 [x1 y1 x2 y2
+                     xtemp1 ytemp1 xtemp2 ytemp2] 
 
 The purpose of this program is to align two FITS images 
 by normalized 2D cross-correlation. The input images need to 
@@ -33,18 +33,18 @@ applied) as well as the correlation plot as FITS files.
 
 Switches:
 
-  -o=<outfile>   If <outfile> is given, the output is written to 
-                 <outfile>.out and the spectral index image to 
-                 <outfile>.fits.  
+  -o=outfile     If outfile is given, the output is written to 
+                 outfile.out and the spectral index image to 
+                 outfile.fits.  
 
-  -c=<icut>      Parameters <icut> and is the cut-off level used 
+  -c=icut        Parameters icut and is the cut-off level used 
                  in calculating spectral index maps. They are 
                  optional: if not specified by the user, a value 
                  of 0.001 Jy/beam is used. 
 
   -a             Automatic mode: The user still needs to provide the 
                  coordinates of the image region and template in 
-                 [<x1> <y1> <x2> <y2> <xtemp1> <ytemp1> <xtemp2> <ytemp2>]. 
+                 [x1 y1 x2 y2 xtemp1 ytemp1 xtemp2 ytemp2]. 
                  No output graphics.
 
 NOTE THAT BAD VALUE SUPPORT IN PDL IS NEEDED TO RUN THIS 
